@@ -1,0 +1,32 @@
+.footer {
+  height: 35px;
+  background-color: rgb(45,49,66);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  i {
+    padding-left: 20px;
+  }
+}
+.copyright {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:#FFF;
+}
+.social{
+  float : right;
+  color: #FFF;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: center;
+    list-style: none;
+    margin-top: 10px;
+    }
+    a{
+      color:#FFF;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+}
