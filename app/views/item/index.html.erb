@@ -1,0 +1,9 @@
+<h1>Item#index</h1>
+
+<% @allitems.each do |item| %>
+
+	<%= image_tag(item.image, size: "100x100") %><br>
+	<%= link_to item.name, item_show(:id) %>, <%= item.price %>$
+	<hr>
+
+<%end%>
