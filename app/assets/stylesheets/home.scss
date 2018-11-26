@@ -1,0 +1,68 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.cards-container {
+  background-color: rgb(240, 240, 240);
+  margin-top: 100px;
+  h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-family: 'Open Sans Condensed';
+    font-size: 30px;
+  }
+}
+
+.text-container {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.infos{
+  display: flex;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  iframe{
+    border: 3px solid rgb(73, 70, 83);
+  }
+}
+
+.about-container {
+  text-align: center;
+  margin-left: 40px;
+  margin-top: 100px;
+  h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: rgb(45,49,66);
+  }
+  h3 {
+    font-weight: 500;
+    line-height: 2;
+    font-size: 25px;
+    color: rgb(88, 84, 85);
+  }
+  hr {
+    color: grey;
+  }
+  p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 2;
+    color: rgb(73, 70, 83);
+  }
+}
+
+.video-container {
+  margin-right: 50px;
+  text-align: center;
+  margin-top: 100px;
+  h3 {
+    font-size: 20px;
+  }
+  span {
+    color: rgb(88, 7, 20);
+  }
+}

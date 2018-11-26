@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: cats-cats-cats_development
+  database: ui-sprint-design_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: cats-cats-cats
+  #username: ui-sprint-design
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: cats-cats-cats_test
+  database: ui-sprint-design_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: cats-cats-cats_production
-  username: cats-cats-cats
-  password: <%= ENV['CATS-CATS-CATS_DATABASE_PASSWORD'] %>
+  database: ui-sprint-design_production
+  username: ui-sprint-design
+  password: <%= ENV['UI-SPRINT-DESIGN_DATABASE_PASSWORD'] %>
