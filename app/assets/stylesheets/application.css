@@ -21,3 +21,8 @@ body {
 .container {
 	padding-top: 50px;
 }
+
+.footer {
+	bottom: 0;
+	position: relative;
+}
