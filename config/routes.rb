@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   get '/item/index', to: 'item#index'
   get '/item/show/:id', to: 'item#show'
+  post '/item/add/:id', to: "item#add_to_cart"
+
+  # Cart section
 
   resources :carts
+
 
 end

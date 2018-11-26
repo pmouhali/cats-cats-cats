@@ -6,6 +6,15 @@ class ItemController < ApplicationController
   def show
   	@item = Item.find(params[:id])
   end
+
+  def add_to_cart
+    @cart = Cart.find(current_user.id)
+    @item = Item.find(params[:id])
+    put @item
+    @cart.item << @item
+  end
+
+
 end
 
 
