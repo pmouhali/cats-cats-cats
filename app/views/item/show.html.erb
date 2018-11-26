@@ -1,6 +1,9 @@
 <h1><%=@item.name%></h1>
 <h3>Wow j'suis trop beau et trop mignon, allez ajoute moi à ton panier !</h3>
-<%= link_to "ADD TO CART" %>
+
+<% if !current_user.nil? %>
+<%= link_to "ADD TO CART", cart_path("#{current_user.id}")  %>
+<% end %>
+
 <h3><%=@item.price%>$</h3>
 <%= image_tag(@item.image) %>
-
