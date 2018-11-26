@@ -3,7 +3,7 @@
 <% @allitems.each do |item| %>
 
 <div style="display: flex; flex-direction: row; justify-content: space-around;">
-	<%= image_tag(item.image, size: "50%") %>
+	<%= image_tag(item.image, size: "150x150") %>
 	<div>
 		<h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
 		<h3><%= item.price %>$</h3><br>
