@@ -2,8 +2,11 @@
 
 <% @allitems.each do |item| %>
 
-	<%= image_tag(item.image, size: "100x100") %><br>
-	<%= link_to item.name, item_show(:id) %>, <%= item.price %>$
-	<hr>
+<div style="display: flex; flex-direction: row; justify-content: space-around;">
+	<%= image_tag(item.image, size: "50%") %>
+	<div><h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
+	<%= item.price %>$</div>
+</div>
+<hr>
 
 <%end%>
