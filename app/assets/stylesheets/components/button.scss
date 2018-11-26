@@ -1,0 +1,22 @@
+.btn-blue {
+    background-color: rgb(237,191,73);
+    border: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color: rgb(45,49,66);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+
+.btn-blue:hover {
+    opacity: 0.8;
+
+}
