@@ -105,3 +105,89 @@ Completed 200 OK in 1805ms (Views: 1761.7ms | ActiveRecord: 3.3ms)
 
 
   [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3125423975652517770)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateOrders (20181126104919)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181126104919_create_orders.rb:3
+  [1m[35m (47.7ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_user_id" ON "orders"  ("user_id")[0m
+  ↳ db/migrate/20181126104919_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181126104919"]]
+  ↳ bin/rails:9
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateLists (20181126114254)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (61.8ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "order_id" bigint, "item_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181126114254_create_lists.rb:3
+  [1m[35m (55.3ms)[0m  [1m[35mCREATE  INDEX  "index_lists_on_order_id" ON "lists"  ("order_id")[0m
+  ↳ db/migrate/20181126114254_create_lists.rb:3
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE  INDEX  "index_lists_on_item_id" ON "lists"  ("item_id")[0m
+  ↳ db/migrate/20181126114254_create_lists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181126114254"]]
+  ↳ bin/rails:9
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3125423975652517770)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/item/index" for 127.0.0.1 at 2018-11-26 13:19:07 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ratatek/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:3
+  Rendered item/index.html.erb within layouts/application (155.2ms)
+Completed 200 OK in 199ms (Views: 172.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/item/show/5" for 127.0.0.1 at 2018-11-26 13:20:26 +0100
+Processing by ItemController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/item_controller.rb:7
+  Rendering item/show.html.erb within layouts/application
+  Rendered item/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/item/index" for 127.0.0.1 at 2018-11-26 13:20:55 +0100
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:3
+  Rendered item/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/item/index" for 127.0.0.1 at 2018-11-26 13:20:57 +0100
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:3
+  Rendered item/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/item/index" for 127.0.0.1 at 2018-11-26 13:21:06 +0100
+Processing by ItemController#index as HTML
+  Rendering item/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/item/index.html.erb:3
+  Rendered item/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
