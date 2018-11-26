@@ -7,3 +7,10 @@ class ItemController < ApplicationController
   	@item = Item.find(params[:id])
   end
 end
+
+
+# Mailer section
+
+# Action for trigger mailer to be define
+
+# ContactMailer.contact(@user).deliver_now
