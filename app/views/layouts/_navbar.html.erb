@@ -6,9 +6,6 @@
    <div class="navbar-right">
      <ul>
       <li>
-        <%= link_to "log out", destroy_user_session_path, method: :delete%>
-      </li>
-      <li>
         <%= link_to "log in", new_user_session_path%>
       </li>
       <li>
@@ -27,6 +24,9 @@
        <% if !current_user.nil? %> 
          <li>
            <a href="#contact">Panier</a>
+         </li>
+         <li>
+           <%= link_to "log out", destroy_user_session_path, method: :delete%>
          </li>
        <% end %>
 
