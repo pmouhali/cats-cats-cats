@@ -5,12 +5,18 @@
 
    <div class="navbar-right">
      <ul>
+
+       <% if current_user.nil? %>
+
       <li>
         <%= link_to "log in", new_user_session_path%>
       </li>
       <li>
         <%= link_to "sign up", new_user_registration_path%>
       </li>
+
+      <% end %>
+
        <li>
          <a href="#">Adopt a cat</a>
        </li>
@@ -21,9 +27,9 @@
          <a href="#contact">Contact</a>
        </li>
 
-       <% if !current_user.nil? %> 
+       <% if !current_user.nil? %>
          <li>
-           <a href="#contact">Panier</a>
+           <%= link_to "Panier", "/cart/#{current_user.id}" %>
          </li>
          <li>
            <%= link_to "log out", destroy_user_session_path, method: :delete%>

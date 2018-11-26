@@ -1,0 +1,16 @@
+
+<% if !current_user.nil? %>
+
+  <% @user_cart.items.each do |u| %>
+<hr>
+  <%= u.name %><br>
+  <%= u.price %><br>
+  <%= u.image %> <br><br>
+  <%= link_to "Retirer du panier"%>
+  <hr>
+
+
+  <% end %>
+
+
+<% end %>
