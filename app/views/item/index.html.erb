@@ -4,8 +4,11 @@
 
 <div style="display: flex; flex-direction: row; justify-content: space-around;">
 	<%= image_tag(item.image, size: "50%") %>
-	<div><h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
-	<%= item.price %>$</div>
+	<div>
+		<h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
+		<h3><%= item.price %>$</h3><br>
+		<%= link_to "ADD TO CART" %>
+	</div>
 </div>
 <hr>
 
