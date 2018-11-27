@@ -3,8 +3,12 @@ class CartsController < ApplicationController
 
   def destroy
     @cart_with_item = Cart.find(current_user.id)
-    if @cart_with_item.items.where(name: @item_to_delete.name).destroy
+    @item_to_delete = Item.find(params["id"])
+
+
+    if @cart_with_item.items.delete(@item_to_delete)
       flash[:notice] = "Le chat a été retiré du panier"
+      @id = @item_to_delete.id.to_s
     else
       flash[:error] = "Erreur"
     end
