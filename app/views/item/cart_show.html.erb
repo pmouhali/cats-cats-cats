@@ -1,6 +1,7 @@
 
 <% if !current_user.nil? %>
 
+
   <% @user_cart.items.each do |u| %> <!-- Les items du panier -->
     <div id="cat_resume<%=u.id.to_s%>">
       <hr>

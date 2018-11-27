@@ -23,6 +23,21 @@
       <% end %>
     </div>
 
+    <div class="">
+    	<%= link_to "Back to cats", '/' %>
+    </div>
+
+    <div class="">
+    	<% if current_user.try(:admin?) %>
+    		<%= link_to "Edit Item", "/item/edit/#{params[:id]}" %>
+    	<% end %>
+    </div>
+
+    <div class="">
+    	<% if current_user.try(:admin?) %>
+	    	<%= link_to "Delete Item", "/item/delete/#{params[:id]}", method: :delete %>
+    	<% end %>
+    </div>
 
   </div>
 

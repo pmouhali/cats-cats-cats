@@ -1,0 +1,35 @@
+<div class="form_width">
+  
+  <div class="card">
+
+    <h2 class ="actions">New Item</h2>
+    <p></p>
+    <p></p>
+
+    <%= form_for(@new_item, url: item_create_path) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "your name", class: "form-control", placeholder: "Name of cat" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image, autofocus: true, autocomplete: "your name", class: "form-control", placeholder: "Image of cat" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :price %>
+      <%= f.number_field :price, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Price of cat"%>
+    </div>
+
+    <div class="actions">
+      <button class="btn-blue" <% f.submit "Sign up" %> >Create item</button>
+    </div>
+  
+  <% end %>
+
+
+  </div>
+
+</div>
