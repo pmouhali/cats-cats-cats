@@ -12,10 +12,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
    def create
     super do |resource|
-      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-      Cart.create(user_id: resource.id)
-      ContactMailer.contact(resource.email).deliver_now
-      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+      Cart.create(user_id: resource.id) # resource est l'user qui vient de se crée
+      CatMailer.contact(resource.email).deliver_now
     end
    end
 
