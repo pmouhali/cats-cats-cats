@@ -1,0 +1,9 @@
+<h1>Récapitulatif Commande</h1>
+
+MONTANT TOTAL DE LA COMMANDE : <%= @order.total %> $<br><hr>
+
+<% @order.items.each do |item| %>
+	name: <%= item.name %><br>
+	price: <%= item.price %> $<br>
+	<hr>
+<%end%>

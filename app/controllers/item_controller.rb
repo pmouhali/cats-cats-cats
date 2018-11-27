@@ -53,6 +53,7 @@ class ItemController < ApplicationController
   def cart_show
     @user = User.find(current_user.id)
     @user_cart = Cart.find(@user.id)
+    @new_order = Order.new
   end
 
 

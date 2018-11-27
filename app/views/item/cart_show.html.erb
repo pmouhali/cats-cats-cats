@@ -14,6 +14,14 @@
 
   <% end %>
 
-  <%= link_to "Valider la commande", "/order/create" %>
+  <%= form_for(@new_order, url: order_create_path, method: :post) do |f| %>
+
+  <%= f.hidden_field :user, :value => current_user.id %>
+
+  <%= f.hidden_field :cart, :value => current_user.cart.id %>
+
+  <%= f.submit "Valider la commande" %>
+
+  <%end%>
 
 <% end %>
