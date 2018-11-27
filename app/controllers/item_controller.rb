@@ -40,8 +40,14 @@ class ItemController < ApplicationController
   def add_to_cart
     @cart = Cart.find(current_user.id)
     @item = Item.find(params[:id])
-    puts @item
-    @cart.items << @item
+
+    if @cart.items.where(name: @item.name).exists?
+      flash[:info] = "Ce chat est déja dans votre panier"
+      # redirect
+    else
+      @cart.items << @item
+    end
+
   end
 
   def cart_show
