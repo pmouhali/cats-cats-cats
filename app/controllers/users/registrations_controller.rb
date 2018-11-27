@@ -13,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    def create
     super do |resource|
       Cart.create(user_id: resource.id) # resource est l'user qui vient de se crée
+      @user_mail = resource.email
       CatMailer.contact(resource.email).deliver_now
     end
    end
