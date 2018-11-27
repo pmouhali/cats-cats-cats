@@ -29,6 +29,7 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100vh !important;
   width: 100% !important;
+  background-color: red;
 }
 
 .container {
@@ -36,11 +37,12 @@ body {
 }
 
 .form_width{
-  background-image: url(fond.png);
+/*  background-image: url(fond.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
+
   height: 81vh;
   display: flex;
   align-items: center;
@@ -79,6 +81,7 @@ body {
 {
   width: 400px;
   padding: 50px 25px 50px 25px;
+  background-image: url(fond.png);
 }
 
 .actions
@@ -90,4 +93,9 @@ body {
 .form-control
 {
   height: 10px;
+}
+
+.witdh
+{
+  width: 100% !important;
 }
