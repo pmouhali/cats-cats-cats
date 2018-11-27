@@ -14,9 +14,7 @@
  *= require_self
  */
 
-body {
-	font-family: 'Roboto', sans-serif;
-}
+
 
 .container {
 	padding-top: 50px;
@@ -25,4 +23,71 @@ body {
 .footer {
 	bottom: 0;
 	position: relative;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh !important;
+  width: 100% !important;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.form_width{
+  background-image: url(fond.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  height: 81vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /*width: 300px;*/
+  /*padding: 50px 100px 50px 100px;*/
+  
+  /*box-shadow: 0 1px 15px 1px rgba(62, 57, 107, .07);*/
+
+}
+
+.btn-blue {
+    background-color: rgb(237,191,73);
+    border: none;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    color: rgb(45,49,66);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 8px;
+/*    -webkit-transition-duration: 0.2s;  Safari 
+    transition-duration: 0.2s;*/
+/*    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;*/
+    /*text-align: center;*/
+}
+.btn-blue:hover {
+    opacity: 0.8;
+}
+
+.card
+{
+  width: 400px;
+  padding: 50px 25px 50px 25px;
+}
+
+.actions
+{
+  margin: 20px;
+  text-align: center;
+}
+
+.form-control
+{
+  height: 10px;
 }
