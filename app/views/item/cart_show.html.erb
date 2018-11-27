@@ -5,10 +5,10 @@
       <hr>
         <table style="width:100%">
           <tr>
-            <th><%= image_tag(u.image, size: "150x150") %></th>
+            <th><%= image_tag(u.image, size: "100x100") %></th>
             <th><%= u.name %></th>
             <th>$<%= u.price %></th>
-            <th><%= link_to "Retirer du panier", "/cart/#{@user_cart.id}/item/#{u.id}", controller: "carts", action: "destroy", method: :delete, remote: true%></th>
+            <th><%= link_to "Remove", "/cart/#{@user_cart.id}/item/#{u.id}", controller: "carts", action: "destroy", method: :delete, remote: true%></th>
           </tr>
         </table><br> 
     </div>
