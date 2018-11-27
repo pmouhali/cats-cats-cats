@@ -7,13 +7,13 @@
       <hr>
         <%= u.name %><br>
         <%= u.price %><br>
-        <%= u.image %> <br>
+        <%= image_tag(u.image) %> <br>
         <%= link_to "Retirer du panier", "/cart/#{@user_cart.id}/item/#{u.id}", controller: "carts", action: "destroy", method: :delete, remote: true%>
       <hr>
     </div>
 
   <% end %>
 
-  <%= link_to "Valider la commande" %>
+  <%= link_to "Valider la commande", "/order/create" %>
 
 <% end %>
