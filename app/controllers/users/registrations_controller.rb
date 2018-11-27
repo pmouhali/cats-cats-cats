@@ -14,7 +14,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super do |resource|
       puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
       Cart.create(user_id: resource.id)
-      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"      
+      ContactMailer.contact(resource.email).deliver_now
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
     end
    end
 
