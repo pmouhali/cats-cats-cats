@@ -2,3 +2,20 @@
 <p>As an administrator, you can create new items from here.</p>
 
 <%= link_to "New Item", "/item/new" %><br>
+
+<p>All orders</p>
+<%@orders.each do |order|%>
+	Order Id : <%= order.id %><br>
+
+	User : <%= order.user.name %><br>
+	User email : <%= order.user.email %><br>
+
+Items :
+<ul>
+	<% order.items.each do |item| %>
+		<li><%= item.name %>, <%= item.price %>$</li>
+	<%end%>
+</ul>
+
+	Total :	<%= order.total %> $<hr><br>
+<%end%>
