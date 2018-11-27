@@ -1,0 +1,5 @@
+$(document).ready(function() {
+<% if @item_to_delete.destroyed? %> // si l'email est bel et bien supprimé
+  $('.cat-resume' + <%=@i%>).hide().remove(); // then we hide it
+<% end %>
+});
