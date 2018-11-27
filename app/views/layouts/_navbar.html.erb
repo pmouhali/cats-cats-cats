@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar-logo">
     </div>
-<p>Cc branche test</p>
+
 
    <div class="navbar-right">
      <ul>
@@ -10,16 +10,16 @@
        <% if current_user.nil? %>
 
       <li>
-        <%= link_to "log in", new_user_session_path%>
+        <%= link_to "Log in", new_user_session_path%>
       </li>
       <li>
-        <%= link_to "sign up", new_user_registration_path%>
+        <%= link_to "Sign up", new_user_registration_path%>
       </li>
 
       <% end %>
 
        <li>
-         <a href="#">Adopt a cat</a>
+        <%= link_to "Adopt a cat", item_index_path%>
        </li>
        <li>
          <a href="#about">About us</a>
@@ -30,7 +30,7 @@
 
        <% if !current_user.nil? %>
          <li>
-           <%= link_to "Panier", "/cart/#{current_user.id}" %>
+           <%= link_to "My cart", "/cart/#{current_user.id}" %>
          </li>
 
          <li>

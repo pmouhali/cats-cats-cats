@@ -1,11 +1,7 @@
 <div class="witdh">
 
-
-<button type="button" class="btn-blue">Button</button><br>
-
-
 <% @allitems.each do |item| %>
-
+<hr>
 <div style="display: flex; flex-direction: row; justify-content: space-around;">
 	<%= image_tag(item.image, size: "150x150") %>
 	<div>
@@ -13,8 +9,8 @@
 		<h3><%= item.price %>$</h3><br>
 	</div>
 </div>
-<hr>
 
-<%end%>
+
+<%end%><br>
 
 </div>

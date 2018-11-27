@@ -1,19 +1,20 @@
-
 <% if !current_user.nil? %>
 
 
   <% @user_cart.items.each do |u| %> <!-- Les items du panier -->
     <div id="cat_resume<%=u.id.to_s%>">
       <hr>
-        <%= u.name %><br>
-        <%= u.price %><br>
-        <%= image_tag(u.image) %> <br>
-        <%= link_to "Retirer du panier", "/cart/#{@user_cart.id}/item/#{u.id}", controller: "carts", action: "destroy", method: :delete, remote: true%>
-      <hr>
+        <table style="width:100%">
+          <tr>
+            <th><%= image_tag(u.image, size: "100x100") %></th>
+            <th><%= u.name %></th>
+            <th>$<%= u.price %></th>
+            <th><%= link_to "Remove", "/cart/#{@user_cart.id}/item/#{u.id}", controller: "carts", action: "destroy", method: :delete, remote: true%></th>
+          </tr>
+        </table><br>
     </div>
-
   <% end %>
 
-  <%= link_to "Valider la commande", "/order/create" %>
+  <%= link_to "Confirm your order", "/order/create" %>
 
 <% end %>
