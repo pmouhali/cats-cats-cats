@@ -35,6 +35,9 @@
          <li>
            <%= link_to "log out", destroy_user_session_path, method: :delete%>
          </li>
+         <% if current_user.try(:admin?) %>
+          <%= link_to "Admin Dashboard", "/admin/dashboard" %>
+         <% end %>
        <% end %>
 
 
