@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # Cart section
 
   resources :carts
+  
+  delete '/cart/:id/item/:id', to: 'carts#destroy'
 
 
 end
