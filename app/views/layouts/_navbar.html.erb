@@ -32,6 +32,12 @@
          <li>
            <%= link_to "Panier", "/cart/#{current_user.id}" %>
          </li>
+
+         <li>
+           <%= link_to "Profil", "/user/#{current_user.id}" %>
+
+         </li>
+
          <li>
            <%= link_to "log out", destroy_user_session_path, method: :delete%>
          </li>

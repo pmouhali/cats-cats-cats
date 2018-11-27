@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profil/show'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'item#index'
 
@@ -11,17 +12,20 @@ Rails.application.routes.draw do
   patch '/item/update', to: 'item#update'
 
   delete '/item/delete/:id', to: 'item#destroy'
-  
+
   get '/item/show/:id', to: 'item#show'
   post '/item/add/:id', to: "item#add_to_cart"
 
   get '/cart/:id', to: "item#cart_show"
 
-  # Cart section
+  # ----- Cart section -----
 
   resources :carts
-  
+
   delete '/cart/:id/item/:id', to: 'carts#destroy'
 
+  # ----- User section -----
+
+  get '/user/:id/', to: "profil#show"
 
 end
