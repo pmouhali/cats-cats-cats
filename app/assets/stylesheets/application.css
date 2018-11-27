@@ -29,7 +29,9 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100vh !important;
   width: 100% !important;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
@@ -43,7 +45,7 @@ body {
     -o-background-size: cover;
     background-size: cover;*/
 
-  height: 81vh;
+  /*height: 81vh;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,4 +100,11 @@ body {
 .witdh
 {
   width: 100% !important;
+}
+
+
+p
+{
+  text-align: justify;
+  font-size: 1.5em;
 }

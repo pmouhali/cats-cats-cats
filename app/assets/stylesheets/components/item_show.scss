@@ -1,0 +1,54 @@
+.show
+{
+  display: flex;
+  flex-wrap: wrap;
+  /*background-color: purple;*/
+  
+}
+
+.description
+{
+  min-width: 400px;
+  width: 40%;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-arround;
+}
+
+.image_show
+{
+  /*margin-right: 20px*/
+  margin-bottom: 20px;
+  padding: 10px;
+  // background-color: red;
+  /*min-width: 400px;*/
+  max-width: 600px;
+  /*width: 100%;*/
+}
+
+img
+{
+  max-width: 100%;
+}
+
+.title_show
+{
+  text-align: center;
+  font-size: 5em;
+  margin-bottom: 70px;
+}
+
+.text_description
+{
+  text-align: justify;
+  font-size: 1.5em;
+
+}
+
+.bouton_show
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

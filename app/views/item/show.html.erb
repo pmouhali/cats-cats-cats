@@ -1,9 +1,29 @@
-<h1><%=@item.name%></h1>
-<h3>Wow j'suis trop beau et trop mignon, allez ajoute moi à ton panier !</h3>
+<h1 class="title_show"><%=@item.name%></h1>
 
-<% if !current_user.nil? %>
-<%= link_to "ADD TO CART", "/item/add/#{params[:id]}", method: :post  %>
-<% end %>
+<div class="show">
 
-<h3><%=@item.price%>$</h3>
+
+<div class="image_show">
 <%= image_tag(@item.image) %>
+</div>
+
+  <div class="description">
+
+    <p class="text_description">Wow j'suis trop beau et trop mignon, allez ajoute moi à ton panier !</p>
+
+
+
+    <h3><%=@item.price%>$</h3>
+
+
+
+    <div class="bouton_show">
+      <% if !current_user.nil? %>
+      <%= link_to "ADD TO CART", "/item/add/#{params[:id]}", method: :post, class: "btn-blue"%>
+      <% end %>
+    </div>
+
+
+  </div>
+
+</div>
