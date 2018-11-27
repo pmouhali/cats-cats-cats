@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
   get 'profil/show'
-  devise_for :users, controllers: { registrations: 'users/registrations' }
 
 # '/'   
-
   root 'item#index'
 # routes auto générées par Devise
   devise_for :users, controllers: { registrations: 'users/registrations' }
