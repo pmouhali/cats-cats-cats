@@ -24,8 +24,8 @@ class ChargesController < ApplicationController
 	  redirect_to new_charge_path
 	end
 
-	if !current_user.nil?
-		@user_who_order = current_user.email
+	if !@current_user.nil?
+		@user_who_order = @current_user.email
 	end
 
 
