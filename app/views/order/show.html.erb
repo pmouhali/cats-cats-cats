@@ -1,10 +1,9 @@
-<h1>Summary of your order</h1>
-
-Total amount : $ <%= @order.total %> <br><hr>
+<h1>Summary of your order</h1><hr>
 
 <% @order.items.each do |item| %>
 	Name: <%= item.name %><br>
 	Price: $ <%= item.price %><br>
 	<hr>
-<%end%>
-<%= link_to "Process to payment", new_charge_path, class: "btn-blue" %>
+<%end%><br>
+<strong>Total amount : $ <%= @order.total %></strong><br><br><br>
+<%= link_to "Process to payment", new_charge_path, class: "btn-blue" %><br>
