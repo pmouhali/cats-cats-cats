@@ -1,9 +1,10 @@
-<h1>Récapitulatif Commande</h1>
+<h1>Summary of your order</h1>
 
-MONTANT TOTAL DE LA COMMANDE : <%= @order.total %> $<br><hr>
+Total amount : $ <%= @order.total %> <br><hr>
 
 <% @order.items.each do |item| %>
-	name: <%= item.name %><br>
-	price: <%= item.price %> $<br>
+	Name: <%= item.name %><br>
+	Price: $ <%= item.price %><br>
 	<hr>
 <%end%>
+<%= link_to "Process to payment", new_charge_path, class: "btn-blue" %>
