@@ -46,7 +46,9 @@ class ItemController < ApplicationController
       # redirect
     else
       @cart.items << @item
+      flash[:info] = "Ce chat a bien été ajouté dans votre panier"
     end
+    redirect_to root_path
 
   end
 
