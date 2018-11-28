@@ -24,12 +24,6 @@ class ChargesController < ApplicationController
 	  redirect_to new_charge_path
 	end
 
-	if session[:user_id]
-		current_user = User.find(session[:user_id])
-	else
-		current_user = nil
-	end
-
 	if !current_user.nil?
 		@user_who_order = current_user.email
 	end

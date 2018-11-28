@@ -2,10 +2,10 @@ Voir le planning des tâches sur Trello :
 
 https://trello.com/b/SwMUq60n/thp-pj1
 
-HEROKU PIPELINE : 
+HEROKU PIPELINE :
 
-	A partir de ce repo 'cats-cats-cats', deux apps heroku on été créees. Kiss-kiss-cats-cats pour la production, et kiss-kiss-cats-cats-dev pour le development stage. Le pipeline est connecté au repo.
-	Mode d'emploi : push sur l'app -dev, et si foncitonnel, promote sur production via Heroku. 
+	Pas de pipeline. 
+ 
 
 DEV : 
 
@@ -24,6 +24,3 @@ EDIT USER = https://localhost:3000/users/edit
 NEW PASSWORD (for user) = https://localhost:3000/users/password/new
 
 EDIT PASSWORD = https://localhost:3000/users/password/edit
-
-
-testetstets
