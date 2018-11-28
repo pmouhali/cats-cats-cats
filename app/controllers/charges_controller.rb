@@ -29,6 +29,7 @@ class ChargesController < ApplicationController
 	  #CatMailer.orderconfirm(ADMIN).deliver_now #=====> ADMIN MAILER
 
 
+
 	  rescue Stripe::CardError => e
 	    flash[:error] = e.message
 		redirect_to new_charge_path
