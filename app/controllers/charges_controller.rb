@@ -23,4 +23,14 @@ class ChargesController < ApplicationController
 	  flash[:error] = e.message
 	  redirect_to new_charge_path
 	end
+
+	@user_who_order = current_user.email
+
+
+	#USER CONFIRMATION MAIL
+	CatMailer.orderconfirm(@user_who_order).deliver_now
+	#ADMIN CONFIRMATION MAIL (to add in seed.rb)
+	#	CatMailer.oneorderhasbeendone(admin).deliver_now #ADMIN
+
+
 end
