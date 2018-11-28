@@ -11,6 +11,10 @@ gem 'faker'
 gem 'mailjet'
 gem 'bootstrap', '~> 4.1.3'
 
+# ----- TDD Section -----
+  gem 'rspec-rails', '~> 3.8'
+  gem 'capybara', '>= 2.15'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
