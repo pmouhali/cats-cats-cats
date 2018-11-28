@@ -23,8 +23,9 @@ class ChargesController < ApplicationController
 	  flash[:error] = e.message
 	  redirect_to new_charge_path
 	end
-
-	@user_who_order = current_user.email
+	if current_user
+		@user_who_order = current_user.email
+	end
 
 
 	#USER CONFIRMATION MAIL
