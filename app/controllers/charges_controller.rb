@@ -34,4 +34,6 @@ class ChargesController < ApplicationController
 
 	end
 
+	redirect_to root_path
+
 end
