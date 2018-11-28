@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 User.create(name: "Martine", email: "palomamouhali@gmail.com", password: "123456", password_confirmation: "123456", admin: true)
 
-Category.create(name: "Chat Intelligent",description: "Ces chats savent ouvrir les portes, parfois même lire.")
-Category.create(name: "Chat Calin",description: "Ces chats sont très affectueux, mais ducou ils sont jaloux donc attention aux étrons sous l'oreiller.")
-Category.create(name: "Chat Démoniaque",description: "A vos risques et périls")
-=======
 Category.create(name: "Smart cat",description: "These cats can open doors, sometimes even read.")
 Category.create(name: "Cuddly cat",description: "These cats are very affectionate, but as a result they are jealous so watch out for turds under the pillow..")
 Category.create(name: "Demonic cat",description: "At your own risk and peril.")
->>>>>>> development
+
 
 j = 1
 6.times do
