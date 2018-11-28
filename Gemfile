@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem'jquery-rails'
+gem 'stripe'
+gem 'jquery-rails'
 gem 'mini_racer'
 gem 'devise'
 gem 'faker'

@@ -41,4 +41,7 @@ Rails.application.routes.draw do
   resources :carts  
   delete '/cart/:id/item/:id', to: 'carts#destroy'
 
+
+# Stripe
+  resources :charges
 end
