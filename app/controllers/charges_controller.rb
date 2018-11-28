@@ -23,7 +23,7 @@ class ChargesController < ApplicationController
 	  flash[:error] = e.message
 	  redirect_to new_charge_path
 	end
-	if current_user
+	if !current_user.nil?
 		@user_who_order = current_user.email
 	end
 
