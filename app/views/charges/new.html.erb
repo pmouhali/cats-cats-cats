@@ -1,15 +1,18 @@
+<h1>How you will pay for your order?</h1><hr>
 
-<%= form_tag charges_path do %>
-  <article>
+
+<table style="width:100%">
+   <tr>
+      <th>Credit card</th>
+      <th>
+        <%= form_tag charges_path do %>
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
 
-      
 
-  </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -17,3 +20,8 @@
           data-amount=<%= @amount*100 %> 
           data-locale="auto"></script>
 <% end %>
+      </th>
+    </tr>
+</table><hr>
+
+
