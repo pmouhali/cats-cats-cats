@@ -23,18 +23,16 @@ class ChargesController < ApplicationController
 	  )
 
 
-		@email = charge["source"]["name"]
+	  @email = charge["source"]["name"]
 
-		CatMailer.orderconfirm(@email).deliver_now
-		#CatMailer.orderconfirm(ADMIN).deliver_now #=====> ADMIN MAILER
+	  CatMailer.orderconfirm(@email).deliver_now
+	  #CatMailer.orderconfirm(ADMIN).deliver_now #=====> ADMIN MAILER
 
 
-		rescue Stripe::CardError => e
-		  flash[:error] = e.message
-		  redirect_to new_charge_path
+	  rescue Stripe::CardError => e
+	    flash[:error] = e.message
+		redirect_to new_charge_path
 
+	  redirect_to '/'
 	end
-
-	redirect_to '/'
-
 end
