@@ -9,7 +9,8 @@
 
   <div class="description">
 
-    <p class="text_description">Wow j'suis trop beau et trop mignon, allez ajoute moi à ton panier !</p>
+    <p class="text_description">Categorie : <%=@item.category.name%>, <%=@item.category.description%></p>
+    <p class="text_description"><%=@item.description%></p>
 
 
 
@@ -26,6 +27,12 @@
     <div class="">
     	<%= link_to "Back to cats", '/' %>
     </div>
+ 
+    <div class="">
+      <% if current_user.try(:admin?) %>
+        <p>This item have been ordered <%= @item.orders.length %> times.</p>
+      <% end %>
+    </div>    
 
     <div class="">
     	<% if current_user.try(:admin?) %>

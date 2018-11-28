@@ -3,7 +3,7 @@ class OrderController < ApplicationController
   	@new_order = Order.new
   	@new_order.user_id = params["order"]["user"]
   	@new_order.cart_id = params["order"]["cart"]
-  	
+
   	@cart = Cart.find(params["order"]["cart"])
   	@cart.items.each do |item|
   		@new_order.items << item
@@ -24,3 +24,8 @@ class OrderController < ApplicationController
   def destroy
   end
 end
+
+
+# to add when a succesfull command happend
+#       CatMailer.orderconfirm(@user.email).deliver_now
+# same for admin

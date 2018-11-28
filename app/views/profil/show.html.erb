@@ -1,15 +1,20 @@
 <div class="form_width">
 
-<div class="card" >
+
+  <div class="card">
     <div>
-    <h1>Your Profile</h1>
-    <P><%= @user.email %></P>
-    <h2>Adress of shipping</h2>
-    <h2><%= @user.name %></h2>
-    <p class="text_profile">Adress : 16 rue de la Paix</br>
-      75001 Paris 1</br>
-      Dans le palais de Macronette</p>
+      <h1>Your Profile</h1>
+      <P><%= @user.email %></P>
+      <h2>Adress of Shipping</h2>
+      <h2><%= @user.name %></h2>
+      <p class="text_profile">
+        Adress : 16 rue de la Paix
+        75001 Paris 1
+        Chez Rothschild </p>
     </div>
+    <%= link_to "Edit Profil", edit_user_registration_path, class: "btn-blue" %>
   </div>
 
 </div>
+   
+

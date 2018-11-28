@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_162316) do
+ActiveRecord::Schema.define(version: 2018_11_27_180200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,13 +19,22 @@ ActiveRecord::Schema.define(version: 2018_11_27_162316) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "item_id"
     t.string "total"
+    t.index ["item_id"], name: "index_carts_on_item_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "carts_items", id: false, force: :cascade do |t|
     t.bigint "cart_id", null: false
     t.bigint "item_id", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -35,6 +44,8 @@ ActiveRecord::Schema.define(version: 2018_11_27_162316) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
   end
 
   create_table "items_orders", id: false, force: :cascade do |t|
@@ -66,4 +77,5 @@ ActiveRecord::Schema.define(version: 2018_11_27_162316) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "carts", "items"
 end
