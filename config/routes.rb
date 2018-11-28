@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'profil/show'
 
-# '/'   
+# '/'
   root 'item#index'
 # routes auto générées par Devise
   devise_for :users, controllers: { registrations: 'users/registrations' }
@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   delete '/item/delete/:id', to: 'item#destroy'
 
   get '/item/show/:id', to: 'item#show'
+
+
 # Controller ITEM mais lié au model CART
   post '/item/add/:id', to: "item#add_to_cart"
   get '/cart/:id', to: "item#cart_show"
@@ -38,7 +40,7 @@ Rails.application.routes.draw do
 
 
 # Cart section
-  resources :carts  
+  resources :carts
   delete '/cart/:id/item/:id', to: 'carts#destroy'
 
 
