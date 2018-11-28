@@ -5,12 +5,4 @@ class ApplicationController < ActionController::Base
 	def sanitize_devise_params
 		devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
 	end
-
-	def current_user
-		if session[:user_id]
-			return User.find(session[:user_id])
-		else
-			return nil
-		end
-	end
 end
