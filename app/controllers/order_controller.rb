@@ -27,5 +27,5 @@ end
 
 
 # to add when a succesfull command happend
-#       CatMailer.contact(@user.email).deliver_now
+#       CatMailer.orderconfirm(@user.email).deliver_now
 # same for admin
