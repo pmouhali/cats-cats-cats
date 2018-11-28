@@ -7,7 +7,7 @@
 	<div>
 		<h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
 		<h3><%= item.price %>$</h3><br>
-		<div>Category : <%= item.category %></div>
+		<div>Category : <%= item.category.name %></div>
 
 	</div>
 </div>
