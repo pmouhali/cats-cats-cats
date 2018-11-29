@@ -1,5 +1,5 @@
 <div class="form_width">
-  
+
   <div class="card">
 
     <h2 class ="actions">Sign up</h2>
@@ -12,12 +12,12 @@
 
     <div class="form-group">
       <%-# <%= f.label :name -%>
-      <%= f.text_field :name, autofocus: true, autocomplete: "your name", class: "form-control", placeholder: "Your Name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "your name", class: "form-control", placeholder: "Your Name", id: "reg_name" %>
     </div>
 
     <div class="field">
       <%-#  <%= f.label :email -%>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your e-mail"%>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your e-mail", id: "reg_email"%>
     </div>
 
     <div class="field">
@@ -25,18 +25,18 @@
       <% if @minimum_password_length %>
       <% b =  @minimum_password_length -%>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control",  placeholder: "Your password #{b} characters minimum" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control",  placeholder: "Your password #{b} characters minimum", id: "reg_pass" %>
     </div></br>
 
     <div class="field">
       <%-# <%= f.label :password_confirmation -%>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm your password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm your password", id: "reg_pass_confirm" %>
     </div>
 
     <div class="actions">
-      <button class="btn-blue" <% f.submit "Sign up" %> >Create account</button>
+      <button class="btn-blue" id="reg_btn" <% f.submit "Sign up" %> >Create account</button>
     </div>
-  
+
   <% end %>
 
 
