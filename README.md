@@ -1,26 +1,11 @@
-Voir le planning des tâches sur Trello :
+Pour tester les différentes features :
+	Compte client :
+		mail : test@test.com
+		mdp : 123456
+	Compte Admin : 
+		mail :palomamouhali@gmail.com
+		mdp :123456
 
-https://trello.com/b/SwMUq60n/thp-pj1
+Client => Sign_up, choisir un ou plusieurs chats, ajouter au panier, valider la commande, valider le paiement. Page de profil. Cancel registration, edit, etc.
 
-HEROKU PIPELINE :
-
-	Pas de pipeline. 
- 
-
-DEV : 
-
-Pour tester le user system : 
-
-NEW USER = http://localhost:3000/users/sign_up
-
-LOGIN = http://localhost:3000/users/sign_in
-
-LOGOUT = https://localhost:3000/users/sign_out
-
-DESTROY USER = https://localhost:3000/users/cancel
-
-EDIT USER = https://localhost:3000/users/edit
-
-NEW PASSWORD (for user) = https://localhost:3000/users/password/new
-
-EDIT PASSWORD = https://localhost:3000/users/password/edit
+Admin => Dashboard avec option Ajouter Item via interface graphique, liste de toutes les commandes. Edit et Delete items sur leur view respectives. Combien de fois à été commandé un item.
