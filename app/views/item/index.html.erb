@@ -1,18 +1,26 @@
-<h1>Adopt your cat</h1>
+<h1 class="title_show">Adopt your cat</h1>
 <div class="witdh">
 
+
+<!-- <hr> -->
+
+<div class="showe">
 <% @allitems.each do |item| %>
-<hr>
-<div style="display: flex; flex-direction: row; justify-content: space-around;">
-	<%= image_tag(item.image, size: "150x150") %>
-	<div>
-		<h3><%= link_to item.name, "/item/show/#{item.id}" %></h3><br>
-		<h3>$ <%= item.price %></h3><br>
-		<div>Category : <%= item.category.name %></div>
-	</div>
+<div class="card" >
+
+
+  <%= image_tag(item.image, size: "250x250") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to item.name, "/item/show/#{item.id}" %></h5>
+    <p class="card-text"><%= item.category.name %></br>
+      <%= item.price %>€
+    </p>
+    <%= link_to "See More", "/item/show/#{item.id}", class: "btn-blue" %>
+  </div>
+  
 </div>
+<%end%>
 
-
-<%end%><br>
+</div>
 
 </div>

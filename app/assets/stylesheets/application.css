@@ -17,12 +17,12 @@
 
 
 .container {
-	padding-top: 50px;
+  padding-top: 50px;
 }
 
 .footer {
-	bottom: 0;
-	position: relative;
+  bottom: 0;
+  position: relative;
 }
 
 body {
@@ -79,11 +79,11 @@ body {
     opacity: 0.8;
 }
 
-.card
+.card1
 {
   width: 400px;
   padding: 50px 25px 50px 25px;
-  background-image: url(fond.png);
+  background-image: url(fond.jpg);
 }
 
 .actions
@@ -107,4 +107,33 @@ p
 {
   text-align: justify;
   font-size: 1.5em;
+}
+
+.showe
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*width: 100vh !important;*/
+  /*background-color: red;*/
+  /*position: relative;*/
+  /*top : 0px;*/
+  /*left: 0px;*/
+}
+
+.card
+{
+  min-width: 250px !important;
+}
+
+.card-body
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title_show
+{
+  text-align: center;
 }
