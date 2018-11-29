@@ -1,7 +1,6 @@
 <h1>Your cart</h1>
-
 <% if !current_user.nil? %>
-
+<div id="all_items">
   <% @user_cart.items.each do |u| %> <!-- Les items du panier -->
     <div id="cat_resume<%=u.id.to_s%>">
       <hr>
@@ -15,15 +14,15 @@
         </table><br>
     </div>
   <% end %>
+</div>
 
   <%= form_for(@new_order, url: order_create_path, method: :post) do |f| %>
-
   <%= f.hidden_field :user, :value => current_user.id %>
-
   <%= f.hidden_field :cart, :value => current_user.cart.id %>
-
   <%= f.submit "Valid your order", class: "btn-blue" %>
 
   <%end%>
+
+<%= link_to "Remove all", "/cart/#{@user_cart.id}/item", controller: "carts", action: "destroy_all", method: :delete, remote: true%>
 
 <% end %><br>

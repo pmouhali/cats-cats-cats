@@ -31,18 +31,14 @@ Rails.application.routes.draw do
   # ----- Cart section -----
 
   resources :carts
-
+  # delete one item
   delete '/cart/:id/item/:id', to: 'carts#destroy'
+  # delete all
+  delete '/cart/:id/item', to: 'carts#destroy_all'
 
   # ----- User section -----
 
   get '/user/:id/', to: "profil#show"
-
-
-# Cart section
-  resources :carts
-  delete '/cart/:id/item/:id', to: 'carts#destroy'
-
 
 # Stripe
   resources :charges

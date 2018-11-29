@@ -7,10 +7,10 @@ class CartsController < ApplicationController
 
 
     if @cart_with_item.items.delete(@item_to_delete)
-      flash[:notice] = "Le chat a été retiré du panier"
+      flash[:notice] = "The cat has been deleted."
       @id = @item_to_delete.id.to_s
     else
-      flash[:error] = "Erreur"
+      flash[:error] = "Error"
     end
 
     respond_to do |format|
@@ -18,6 +18,23 @@ class CartsController < ApplicationController
       format.js
     end
 
+  end
+
+  def destroy_all
+    @cart_with_item = Cart.find(current_user.id)
+    @item_to_delete = Item.all
+
+
+    if @cart_with_item.items.delete(@item_to_delete)
+      flash[:notice] = "All the cats were removed."
+    else
+      flash[:error] = "Error"
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 end
