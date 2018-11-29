@@ -1,4 +1,5 @@
 User.create(name: "Martine", email: "palomamouhali@gmail.com", password: "123456", password_confirmation: "123456", admin: true)
+Cart.create(user_id: 1)
 
 Category.create(name: "Smart cat",description: "These cats can open doors, sometimes even read.")
 Category.create(name: "Cuddly cat",description: "These cats are very affectionate, but as a result they are jealous so watch out for turds under the pillow..")
