@@ -22,13 +22,10 @@ class ChargesController < ApplicationController
 	    :currency    => 'usd'
 	  )
 
-
 	  @email = charge["source"]["name"]
 
 	  CatMailer.orderconfirm(@email).deliver_now
 	  #CatMailer.orderconfirm(ADMIN).deliver_now #=====> ADMIN MAILER
-
-
 
 	  rescue Stripe::CardError => e
 	    flash[:error] = e.message
