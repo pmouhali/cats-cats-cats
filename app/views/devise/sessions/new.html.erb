@@ -1,22 +1,23 @@
 <div class="form_width">
-  
-  <div class="card card1">
+
+  <div class="card">
+
 
 <h2 class ="actions">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%-#  <%= f.label :email -%>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your e-mail"%>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your e-mail", id: "session_email"%>
   </div>
 
   <p></p>
 
   <div class="field">
     <%-# <%= f.label :password -%>
-    <%= f.password_field :password, autocomplete: "new-password", class: "form-control",  placeholder: "Your password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control",  placeholder: "Your password", id: "session_pass" %>
   </div>
-  
+
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -25,7 +26,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in", class: "btn-blue" %>
+    <%= f.submit "Log in", class: "btn-blue", id: "session_btn" %>
   </div>
 <% end %>
 

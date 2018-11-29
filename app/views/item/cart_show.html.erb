@@ -1,3 +1,4 @@
+<div class="cart_show">
 <h1>Your cart</h1>
 <% if !current_user.nil? %>
 <div id="all_items">
@@ -26,3 +27,4 @@
 <%= link_to "Remove all", "/cart/#{@user_cart.id}/item", controller: "carts", action: "destroy_all", method: :delete, remote: true%>
 
 <% end %><br>
+</div>
